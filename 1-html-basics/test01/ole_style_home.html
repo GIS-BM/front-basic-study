@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>홍길동의 홈페이지</title>
+    <style>
+      body {
+        background-color: #ffe4e1;
+        font-family: "굴림체", "Arial", sans-serif;
+        color: #000080;
+      }
+      marquee {
+        color: red;
+        font-weight: bold;
+      }
+      .menu {
+        background-color: #ffdab9;
+        padding: 10px;
+      }
+      .content {
+        background-color: #ffffff;
+        padding: 20px;
+      }
+      .counter {
+        margin-top: 20px;
+        font-size: 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 배경 음악 -->
+    <bgsound src="bgm.mid" loop="infinite" />
+
+    <!-- 깜빡이는 텍스트 -->
+    <marquee behavior="alternate"
+      >🌟 환영합니다! 홍길동의 홈페이지에 오신 것을! 🌟</marquee
+    >
+
+    <!-- 메뉴 -->
+    <table border="1" width="800" align="center">
+      <tr>
+        <td class="menu" colspan="2" align="center">
+          <b>🔹 메뉴 🔹</b> | <a href="#">소개</a> | <a href="#">사진첩</a> |
+          <a href="#">방명록</a> | <a href="#">즐겨찾기</a>
+        </td>
+      </tr>
+
+      <!-- 본문 내용 -->
+      <tr>
+        <td class="content" colspan="2">
+          <h2>👋 안녕하세요!</h2>
+          <p>
+            저는 홍길동입니다. 이 홈페이지는 저의 일상과 관심사를 공유하기 위해
+            만들었습니다.
+          </p>
+          <p>요즘은 웹디자인 공부도 하고 있어요~</p>
+
+          <img
+            src="https://via.placeholder.com/400x200.png?text=%EC%B4%88%EC%9E%90%EB%A5%BC+%EC%9C%84%ED%95%9C+%EC%82%AC%EC%A7%84"
+            alt="사진"
+          />
+
+          <!-- 카운터 흉내 -->
+          <div class="counter">
+            총 방문자 수:
+            <img
+              src="https://www.webfreecounter.com/hit.php?id=12345&nd=6&style=11"
+              alt="counter"
+            />
+          </div>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

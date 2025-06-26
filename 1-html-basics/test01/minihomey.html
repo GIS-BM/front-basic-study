@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>싸이월드 미니홈피</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: "굴림체", sans-serif;
+        background-color: #f2f2f2;
+      }
+
+      .container {
+        width: 800px;
+        margin: 30px auto;
+        display: flex;
+        border: 3px double #ccc;
+        box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      .sidebar {
+        width: 250px;
+        background-color: #dbeeff;
+        padding: 10px;
+        box-sizing: border-box;
+      }
+
+      .sidebar h2 {
+        text-align: center;
+        font-size: 18px;
+        background-color: #92caff;
+        color: white;
+        padding: 5px 0;
+        margin-bottom: 10px;
+      }
+
+      .profile {
+        text-align: center;
+      }
+
+      .profile img {
+        width: 100px;
+        border-radius: 10px;
+      }
+
+      .profile p {
+        margin: 5px 0;
+      }
+
+      .menu {
+        margin-top: 20px;
+        font-size: 14px;
+      }
+
+      .menu a {
+        display: block;
+        padding: 6px;
+        text-decoration: none;
+        color: #003366;
+      }
+
+      .menu a:hover {
+        background-color: #cce6ff;
+      }
+
+      .main {
+        flex: 1;
+        background-color: white;
+        padding: 20px;
+      }
+
+      .main h1 {
+        font-size: 20px;
+        color: #003366;
+        margin-bottom: 10px;
+      }
+
+      .main p {
+        font-size: 14px;
+        margin-bottom: 10px;
+      }
+
+      .footer {
+        margin-top: 20px;
+        font-size: 12px;
+        color: #888;
+      }
+
+      .bgm-box {
+        font-size: 12px;
+        margin-top: 10px;
+        background-color: #f0f8ff;
+        padding: 5px;
+        border: 1px dashed #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- 사이드바 -->
+      <div class="sidebar">
+        <h2>미니홈피</h2>
+        <div class="profile">
+          <img
+            src="https://via.placeholder.com/100x100.png?text=미니미"
+            alt="미니미"
+          />
+          <p><strong>홍길동</strong></p>
+          <p>방문을 환영합니다 💬</p>
+        </div>
+        <div class="menu">
+          <a href="#">📖 다이어리</a>
+          <a href="#">🖼️ 사진첩</a>
+          <a href="#">💬 방명록</a>
+          <a href="#">🎵 BGM 설정</a>
+        </div>
+        <div class="bgm-box">
+          🎧 지금 재생 중: <br />
+          SG워너비 - Timeless
+        </div>
+      </div>
+
+      <!-- 본문 -->
+      <div class="main">
+        <h1>💌 오늘의 한마디</h1>
+        <p>오늘도 좋은 하루 되세요 ☀️</p>
+
+        <h1>📸 최근 사진</h1>
+        <img
+          src="https://via.placeholder.com/300x200.png?text=여행+사진"
+          alt="사진"
+        />
+
+        <div class="footer">
+          © 2025. 홍길동의 미니홈피<br />
+          방문자 수:
+          <img
+            src="https://www.webfreecounter.com/hit.php?id=12345&nd=6&style=10"
+            alt="카운터"
+          />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
