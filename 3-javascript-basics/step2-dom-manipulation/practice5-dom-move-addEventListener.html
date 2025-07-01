@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dom 제어 연습</title>
+  </head>
+  <body>
+    <h3>addEventListener와 querySelector를 이용한 DOM 요소 제어</h3>
+    <form>
+      <input type="text" id="orgTxt" />
+      <button type="button" id="moveBtn">move</button>
+      <input type="text" id="destTxt" />
+    </form>
+    <script>
+      // 1. 이벤트 자원(소스) 객체를 const에 할당 : querySelector();
+      const orgTextElement = document.querySelector("#orgTxt");
+      const destTextElement = document.querySelector("#destTxt");
+      const moveButton = document.querySelector("#moveBtn");
+
+      // 2. 이벤트 발생시 실행될 함수를 정의(화살표 함수로 보통 정의)
+      const moveTxt = () => {
+        destTextElement.value = orgTextElement.value;
+        // input 태그 값 변경 -> value 사용
+        orgTextElement.value = "";
+        orgTextElement.focus();
+      };
+
+      // 3. 자원에 특정 이벤트가 발생될 시 실행될 함수(이벤트 핸들러) 등록
+      moveButton.addEventListener("click", moveTxt);
+
+      /*************enter key 눌렸을 때 이동*****************/
+      // 이벤트 발생시 동작할 함수 정의
+      const handleKeyup = (event) => {
+        // 브라우저 엔진으로부터 event를 받아와서 매개변수로 사용한다고 명시하는 것이 좋다.
+        console.log(event.keyCode); //키코드
+        // console.log("키코드 : " + event.keyCode); //키코드
+        console.log(event.key); //눌린 키
+        console.log(event.type); // 이벤트 타입
+        console.log(event.target); // 이벤트 발생 요소
+        if (event.key == "Enter") {
+          moveTxt();
+        }
+      };
+      orgTextElement.addEventListener("keyup", handleKeyup);
+    </script>
+  </body>
+</html>
